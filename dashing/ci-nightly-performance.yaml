@@ -30,7 +30,7 @@ jenkins_job_timeout: 60
 jenkins_job_upstream_triggers:
 - nightly-extra-rmw-release
 repos_files:
-- https://github.com/ros2/buildfarm_perf_tests/raw/master/tools/ros2_dependencies.repos
+- https://github.com/ros2/buildfarm_perf_tests/raw/ahcorde/simple_pub_sub/tools/ros2_dependencies.repos
 repositories:
   keys:
   - |
@@ -176,5 +176,48 @@ show_plots:
       selection_flag: INCLUDE_BY_COLUMN
       selection_value: 5
       url: /job/Dci__nightly-performance_ubuntu_bionic_amd64/%build%/artifact/ws/test_results/buildfarm_perf_tests/performance_test_results_%name%_cpu_usage.png
-
+  - title: Virtual memory (%)
+    y_axis_label: Number
+    master_csv_name: plot-8724667825425016731.csv
+    style: line
+    y_axis_exclude_zero: True
+    data_series:
+    - data_file: ws/test_results/buildfarm_perf_tests/overhead_test_results_*.csv
+      data_type: csv
+      selection_flag: INCLUDE_BY_COLUMN
+      selection_value: 0
+      url: /job/Dci__nightly-performance_ubuntu_bionic_amd64/%build%/artifact/ws/test_results/buildfarm_perf_tests/overhead_test_results_%name%_virtual_memory.png
+  - title: CPU usage (%)
+    y_axis_label: Number
+    master_csv_name: plot-8724667823425016731.csv
+    style: line
+    y_axis_exclude_zero: True
+    data_series:
+    - data_file: ws/test_results/buildfarm_perf_tests/overhead_test_results_*.csv
+      data_type: csv
+      selection_flag: INCLUDE_BY_COLUMN
+      selection_value: 1
+      url: /job/Dci__nightly-performance_ubuntu_bionic_amd64/%build%/artifact/ws/test_results/buildfarm_perf_tests/overhead_test_results_%name%_cpu_usage.png
+  - title: Disk usage (Kb)
+    y_axis_label: Number
+    master_csv_name: plot-8724667826425016731.csv
+    style: line
+    y_axis_exclude_zero: True
+    data_series:
+    - data_file: ws/test_results/buildfarm_perf_tests/overhead_test_results_*.csv
+      data_type: csv
+      selection_flag: INCLUDE_BY_COLUMN
+      selection_value: 2
+      url: /job/Dci__nightly-performance_ubuntu_bionic_amd64/%build%/artifact/ws/test_results/buildfarm_perf_tests/overhead_test_results_%name%_disk_usage.png
+  - title: Free Disk (Kb)
+    y_axis_label: Number
+    master_csv_name: plot-8724667827425016731.csv
+    style: line
+    y_axis_exclude_zero: True
+    data_series:
+    - data_file: ws/test_results/buildfarm_perf_tests/overhead_test_results_*.csv
+      data_type: csv
+      selection_flag: INCLUDE_BY_COLUMN
+      selection_value: 3
+      url: /job/Dci__nightly-performance_ubuntu_bionic_amd64/%build%/artifact/ws/test_results/buildfarm_perf_tests/overhead_test_results_%name%_free_disk.png
 version: 1

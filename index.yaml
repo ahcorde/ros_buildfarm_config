@@ -83,7 +83,7 @@ distributions:
       ubv8: foxy/release-bionic-arm64-build.yaml
     source_builds:
       default: foxy/source-build.yaml
-jenkins_url: http://build.ros2.org
+jenkins_url: http://3.83.10.11/
 notification_emails:
   - steven+build.ros2.org@openrobotics.org
 prerequisites:
