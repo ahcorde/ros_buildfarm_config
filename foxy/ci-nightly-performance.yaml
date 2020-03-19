@@ -5,7 +5,7 @@ build_environment_variables:
   CMAKE_PREFIX_PATH: '/opt/ros/noetic:$CMAKE_PREFIX_PATH'
   LD_LIBRARY_PATH: '/opt/ros/noetic/lib:$LD_LIBRARY_PATH'
   NDDSHOME: '/opt/rti.com/rti_connext_dds-5.3.1'
-  PYTHONPATH: '/opt/ros/noetic/lib/python2.7/dist-packages:$PYTHONPATH'
+  PYTHONPATH: '/opt/ros/noetic/lib/python3/dist-packages:$PYTHONPATH'
   ROS_PACKAGE_PATH: '/opt/ros/noetic/share'
   ROS_PYTHON_VERSION: '3'
   RTI_NC_LICENSE_ACCEPTED: 'yes'
